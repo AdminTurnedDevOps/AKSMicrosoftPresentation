@@ -1,0 +1,7 @@
+docker-compose up -d (brings up the container. the -d detaches the container, allowing you to still navigate inside of your PowerShell window)
+docker-compose down (stops the container)
+kubectl create -f deploymentname.yml (creates your new Kubernetes deployment)
+kubectl get deployments nginx-deployment (gets info about our newly created Kubernetes deployment)
+kubectl get pods -o wide (Gets our pod names of our kubernetes deployment)
+kubectl expose deployment nginx-deployment --type=LoadBalancer --name=mynginxservice (exposes our service with its port to have access from wherever we specify)
+kubectl get svc mynginxservice -o wide (gets information about our Kubernetes service)
